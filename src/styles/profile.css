@@ -1,0 +1,45 @@
+.profile-shell { width: min(100% - 56px, 1140px); padding-bottom: 54px; }
+.profile-page { gap: 19px; padding-top: 32px; }
+.profile-intro { margin-bottom: 1px; }
+.profile-intro h1 { margin: 8px 0 6px; font: 600 clamp(28px, 3.3vw, 36px)/1.2 var(--font-display); letter-spacing: -1.1px; }
+.profile-account-card, .profile-panel { border: 1px solid var(--color-border); border-radius: 13px; background: linear-gradient(145deg, rgb(17 29 44 / 96%), rgb(12 21 33 / 98%)); box-shadow: 0 16px 46px rgb(0 0 0 / 10%); }
+.profile-account-card { padding: 22px; }
+.profile-account-card__heading, .profile-panel__heading { display: flex; align-items: center; gap: 12px; }
+.profile-icon { width: 42px; height: 42px; flex: 0 0 auto; display: grid; place-items: center; border: 1px solid rgb(0 213 242 / 20%); border-radius: 11px; color: var(--color-cyan); background: rgb(0 213 242 / 8%); }
+.profile-icon--security { color: #a99bff; border-color: rgb(139 120 255 / 24%); background: rgb(139 120 255 / 8%); }
+.profile-account-card__heading h2, .profile-panel__heading h2 { margin: 4px 0 0; color: #f4f8fc; font: 600 17px var(--font-display); }
+.profile-account-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 17px; margin-top: 22px; }
+.profile-account-grid > div { min-width: 0; display: grid; gap: 7px; padding: 14px; border: 1px solid rgb(163 186 212 / 10%); border-radius: 9px; background: rgb(255 255 255 / 2%); }
+.profile-account-grid span { display: flex; align-items: center; gap: 6px; color: var(--color-muted); font-size: 10px; }
+.profile-account-grid span svg { color: var(--color-cyan); }
+.profile-account-grid strong { overflow: hidden; color: #e9f1f8; font-size: 12px; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+.profile-panel { padding: 21px 22px; }
+.profile-panel__heading { margin-bottom: 20px; }
+.profile-form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; max-width: 790px; }
+.profile-form > label { display: grid; align-content: start; gap: 7px; color: var(--color-secondary); font-size: 11px; font-weight: 600; }
+.profile-form input { width: 100%; min-height: 43px; padding: 0 12px; border: 1px solid rgb(163 186 212 / 22%); border-radius: 8px; outline: none; color: #eef5fa; background: rgb(8 13 22 / 45%); font-size: 12px; }
+.profile-form input:focus { border-color: rgb(0 213 242 / 70%); box-shadow: 0 0 0 3px rgb(0 213 242 / 8%); }
+.profile-form input[readonly] { color: var(--color-muted); cursor: not-allowed; }
+.profile-form label small { color: var(--color-muted); font-size: 9px; font-weight: 400; line-height: 1.5; }
+.profile-form > button { justify-self: start; }
+.profile-form .form-message { grid-column: 1 / -1; margin: 0; }
+.profile-form--password { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.profile-form--password .form-field { margin: 0; }
+.profile-form--password .form-field > label { display: block; margin-bottom: 7px; color: var(--color-secondary); font-size: 11px; font-weight: 600; }
+.profile-form--password .password-control { position: relative; }
+.profile-form--password .password-control input { padding-right: 46px; }
+.profile-form--password .password-toggle { position: absolute; top: 0; right: 0; width: 43px; height: 43px; display: grid; place-items: center; border: 0; color: var(--color-muted); background: transparent; cursor: pointer; }
+.profile-password-note { grid-column: 1 / -1; margin: -3px 0 0; color: var(--color-muted); font-size: 10px; line-height: 1.5; }
+.profile-loading { min-height: 170px; display: flex; align-items: center; justify-content: center; gap: 12px; color: var(--color-secondary); }
+
+@media (max-width: 760px) {
+  .profile-shell { width: min(100% - 30px, 650px); padding-bottom: 36px; }
+  .profile-page { gap: 15px; padding-top: 22px; }
+  .profile-account-card, .profile-panel { padding: 17px 14px; }
+}
+@media (max-width: 520px) {
+  .profile-account-grid, .profile-form, .profile-form--password { grid-template-columns: 1fr; }
+  .profile-account-grid { gap: 9px; margin-top: 16px; }
+  .profile-account-grid > div { padding: 11px; }
+  .profile-form { gap: 13px; }
+}

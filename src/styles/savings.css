@@ -1,0 +1,53 @@
+.savings-page { gap: 22px; }
+.savings-summary-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.savings-metric .expense-metric__icon {
+  border-color: rgb(98 216 180 / 21%);
+  color: #79e2bd;
+  background: rgb(98 216 180 / 7%);
+}
+.savings-amount { color: #8de5c5 !important; }
+.recent-saving-row .recent-expense-row__icon {
+  border-color: rgb(98 216 180 / 21%);
+  color: #79e2bd;
+  background: rgb(98 216 180 / 7%);
+}
+
+.savings-breakdown { padding-bottom: 18px; }
+.savings-breakdown .expense-history__heading { margin-bottom: 12px; }
+.savings-breakdown__list {
+  max-height: 220px;
+  overflow: auto;
+  border-top: 1px solid var(--color-border);
+}
+.savings-breakdown__row {
+  min-height: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid rgb(163 186 212 / 8%);
+  color: var(--color-secondary);
+  font-size: 11px;
+}
+.savings-breakdown__row strong {
+  color: #8de5c5;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.savings-breakdown__empty {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+  .savings-summary-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (max-width: 680px) {
+  .savings-page { gap: 16px; }
+  .savings-summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .savings-filters { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .savings-filters .expense-search { grid-column: 1 / -1; }
+}
